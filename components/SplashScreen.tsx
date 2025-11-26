@@ -77,7 +77,7 @@ export default function SplashScreen({ onFinish }: SplashScreenProps) {
           </View>
 
           {/* App Name */}
-          <Text style={styles.appName}>IKARY</Text>
+          <Text style={styles.appName}>IKAROO</Text>
           <Text style={styles.appTagline}>Wallet</Text>
 
           {/* Decorative Elements */}

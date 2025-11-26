@@ -3,7 +3,7 @@
  * Update BASE_URL to point to your backend server
  */
 
-// Development
+// Development - Make sure this matches your backend server
 export const BASE_URL = 'http://192.168.10.169:3000/api';
 
 // Production (uncomment and update when deploying)
@@ -25,6 +25,7 @@ export const API_ENDPOINTS = {
   
   // Profile
   PROFILE: '/wallet/profile',
+  CHANGE_PASSWORD: '/wallet/change-password',
 };
 
 export const API_CONFIG = {
