@@ -113,7 +113,7 @@ export default function ProfileScreen() {
               icon="lock-closed-outline"
               title="Changer le mot de passe"
               subtitle="Mettre à jour votre mot de passe"
-              onPress={() => Alert.alert('Changer le mot de passe', 'Fonctionnalité à venir')}
+              onPress={() => router.push('/change-password' as any)}
             />
             <View style={styles.divider} />
             <MenuItem
@@ -198,7 +198,7 @@ export default function ProfileScreen() {
         </View>
 
         {/* App Version */}
-        <Text style={styles.version}>IKARY PAY v1.0.0</Text>
+        <Text style={styles.version}>IKAROO PAY v1.0.0</Text>
       </ScrollView>
     </View>
   );

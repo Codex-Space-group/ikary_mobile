@@ -9,13 +9,13 @@ import { router } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import React, { useCallback, useEffect, useState } from 'react';
 import {
-    Alert,
-    RefreshControl,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Alert,
+  RefreshControl,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 export default function HomeScreen() {
@@ -146,35 +146,6 @@ export default function HomeScreen() {
           )}
         </View>
 
-        {/* Features */}
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Fonctionnalités</Text>
-          <View style={styles.featuresGrid}>
-            <TouchableOpacity style={styles.featureCard}>
-              <Ionicons name="card-outline" size={32} color={Colors.primary} />
-              <Text style={styles.featureTitle}>Épargne</Text>
-              <Text style={styles.featureSubtitle}>Bientôt</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.featureCard}>
-              <Ionicons name="gift-outline" size={32} color={Colors.accent} />
-              <Text style={styles.featureTitle}>Récompenses</Text>
-              <Text style={styles.featureSubtitle}>Bientôt</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.featureCard}>
-              <Ionicons name="analytics-outline" size={32} color={Colors.success} />
-              <Text style={styles.featureTitle}>Analytiques</Text>
-              <Text style={styles.featureSubtitle}>Bientôt</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.featureCard}>
-              <Ionicons name="help-circle-outline" size={32} color={Colors.info} />
-              <Text style={styles.featureTitle}>Support</Text>
-              <Text style={styles.featureSubtitle}>Obtenir de l'aide</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
       </ScrollView>
     </View>
   );
@@ -273,7 +244,7 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    paddingTop: 60,
+    paddingTop: 5,
   },
   section: {
     padding: Spacing.lg,
@@ -309,30 +280,5 @@ const styles = StyleSheet.create({
     color: Colors.textSecondary,
     marginTop: Spacing.xs,
     textAlign: 'center',
-  },
-  featuresGrid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-  },
-  featureCard: {
-    width: '48%',
-    backgroundColor: Colors.backgroundCard,
-    borderRadius: BorderRadius.md,
-    padding: Spacing.lg,
-    alignItems: 'center',
-    marginBottom: Spacing.md,
-    ...Shadows.small,
-  },
-  featureTitle: {
-    ...Typography.body,
-    color: Colors.textPrimary,
-    fontWeight: '600',
-    marginTop: Spacing.sm,
-  },
-  featureSubtitle: {
-    ...Typography.caption,
-    color: Colors.textSecondary,
-    marginTop: Spacing.xs,
   },
 });

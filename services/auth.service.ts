@@ -146,6 +146,42 @@ export const AuthService = {
   },
 
   /**
+   * Update user profile
+   */
+  async updateProfile(data: { name?: string; email?: string }): Promise<{ message: string; user: any }> {
+    try {
+      const response = await ApiService.put(
+        API_ENDPOINTS.PROFILE,
+        data
+      );
+      
+      // Update stored user data
+      if (response.user) {
+        await StorageService.saveUserData(response.user);
+      }
+      
+      return response;
+    } catch (error: any) {
+      throw this.handleError(error);
+    }
+  },
+
+  /**
+   * Change user password
+   */
+  async changePassword(data: { currentPassword: string; newPassword: string }): Promise<{ message: string }> {
+    try {
+      const response = await ApiService.put(
+        API_ENDPOINTS.CHANGE_PASSWORD,
+        data
+      );
+      return response;
+    } catch (error: any) {
+      throw this.handleError(error);
+    }
+  },
+
+  /**
    * Handle API errors
    */
   handleError(error: any): Error {

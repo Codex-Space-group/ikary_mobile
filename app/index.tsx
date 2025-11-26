@@ -16,5 +16,5 @@ export default function Index() {
     }
   }, [isAuthenticated, isLoading]);
 
-  return <Loading fullScreen message="Chargement d'IKARY PAY..." />;
+  return <Loading fullScreen message="Chargement d'IKAROO PAY..." />;
 }

@@ -32,7 +32,7 @@ export default function SplashScreenSimple({ onFinish }: SplashScreenProps) {
         </View>
 
         {/* App Name */}
-        <Text style={styles.appName}>IKARY</Text>
+        <Text style={styles.appName}>IKAROO</Text>
         <Text style={styles.appTagline}>Your Digital Wallet</Text>
 
         {/* Bottom */}
